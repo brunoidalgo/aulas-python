@@ -5,3 +5,5 @@
 # str, int, float, bool
 print(int('1') + int('1'), type(int('1'))) # Coersão
 print(float('1') + 1)
+print(bool(' '))
+print(str(11) + 'b') # Concatenação
