@@ -19,11 +19,14 @@ try:
   RADAR_RANGE = 1 # A distância que o radar pega
   # CONSTANTE = "Variáveis" que não vão mudar
 
-  if local_carro_float > LOCAL_1:
-    print('Carro passou do radar !')
-  elif local_carro_float >= (LOCAL_1 - RADAR_RANGE) and \
-    local_carro_float <= (LOCAL_1 + RADAR_RANGE) and velocidade_float > RADAR_1:
-    print(f'Carro está no radar 1 e foi detectado com velocidade {velocidade_float} Km/h')
+  velocidade_carro_radar = velocidade_float <= RADAR_1
+  multa = local_carro_float >= (LOCAL_1 - RADAR_RANGE) and local_carro_float <= (LOCAL_1 + RADAR_RANGE)
+  velocidade_carro_radar_multa = velocidade_float > RADAR_1
+
+  if velocidade_carro_radar:
+    print('Carro passou pelo radar sem ser detectado')
+  elif multa and velocidade_carro_radar_multa:
+    print(f'Carro está no radar e foi detectado com velocidade {velocidade_float} Km/h')
   else:
     print(f'Carro não passou do radar e está a {velocidade_float} km/h.')
 except:
