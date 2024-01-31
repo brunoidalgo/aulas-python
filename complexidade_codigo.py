@@ -21,10 +21,11 @@ try:
 
   if local_carro_float > LOCAL_1:
     print('Carro passou do radar !')
-  elif local_carro_float == LOCAL_1 and velocidade_float >= RADAR_1:
-    print(f'Carro está no radar e foi detectado com velocidade {velocidade_float}')
+  elif local_carro_float >= (LOCAL_1 - RADAR_RANGE) and \
+    local_carro_float <= (LOCAL_1 + RADAR_RANGE) and velocidade_float > RADAR_1:
+    print(f'Carro está no radar 1 e foi detectado com velocidade {velocidade_float} Km/h')
   else:
-    print(f'Carro não passou do radar e está a {velocidade_float}km por hora.')
+    print(f'Carro não passou do radar e está a {velocidade_float} km/h.')
 except:
   print('Você forneceu dados incorretos, tente novamente.')
 
