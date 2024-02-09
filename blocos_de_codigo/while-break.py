@@ -8,9 +8,27 @@ Eexecuta uma ação enquanto uma condição for verdadeira.
 
 contador = 0
 
-while contador <= 10:
+while contador <= 30:
+  contador += 1
+
+  if contador == 6:
+    print("Não vou mostrar o 6")
+    continue
+  
+
+  if contador >= 10 and contador <= 26:
+    print(f"Não vou mostrar o {contador}")
+    continue
+  
   print(contador)
-  contador = contador + 1
+
+  if contador == 28:
+    break
+  
+  
+
+print("Acabou")
+  
 
 
 
