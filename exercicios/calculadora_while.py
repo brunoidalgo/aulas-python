@@ -1,4 +1,4 @@
-# Calculadora While
+# Calculadora Whiles
 
 
 # Lógica 
@@ -24,6 +24,9 @@ while True:
     numero_2 = input("Digite o segundo número: ")
 
     numeros_validos = None
+
+    numero_int_1 = 0
+    numero_int_2 = 0
 
     try:
         numero_int_1 = float(numero_1)
@@ -59,7 +62,6 @@ while True:
         break
     else:
         print("Inválido digite novamente")
-        continue
 
     sair = input("Deseja Sair ? S/N ").lower().startswith('s')
     if sair is True:
