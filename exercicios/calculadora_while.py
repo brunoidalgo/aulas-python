@@ -36,34 +36,40 @@ while True:
         numeros_validos = None
 
     if numeros_validos is None:
-        print("Um ou mais números digitados são inválidos")
+        print("Caracter digitado inválido tente novamente")
         continue
 
-    print("\nSelecione o operador")
+    print("\nSelecione o operador:")
     print("\n1 - Adição")
     print("2 - Subtração")
     print("3 - Multiplicação")
     print("4 - Divisão\n")
 
-    operador = input("Qual operador deseja utilizar ? ")
+    operador = input("\nQual operador deseja utilizar ? ")
 
 
     if operador == '1':
         print(f"{numero_int_1} + {numero_int_2} = {numero_int_1 + numero_int_2}")
-        break
+        
     elif operador == '2':
         print(f"{numero_int_1} - {numero_int_2} = {numero_int_1 - numero_int_2}")
-        break
+        
     elif operador == '3':
         print(f"{numero_int_1} * {numero_int_2} = {numero_int_1 * numero_int_2}")
-        break
+        
     elif operador == '4':
         print(f"{numero_int_1} // {numero_int_2} = {numero_int_1 // numero_int_2}")
+<<<<<<< HEAD
         break
     else:
         print("Inválido digite novamente")
+=======
+>>>>>>> 9096b4282ad807f937b9c242e68b9e5b372472c2
 
-    sair = input("Deseja Sair ? S/N ").lower().startswith('s')
+    else:
+        print("Caracter inválido digite novamente")
+        
+    sair = input("\nDeseja Sair ? s/n ").lower().startswith('s')
     if sair is True:
-        print("Você saiu")
+        print("\nVocê saiu")
         break
