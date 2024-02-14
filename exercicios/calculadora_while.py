@@ -1,4 +1,4 @@
-# Calculadora Whiles
+# Calculadora While
 
 
 # Lógica 
@@ -24,9 +24,6 @@ while True:
     numero_2 = input("Digite o segundo número: ")
 
     numeros_validos = None
-
-    numero_int_1 = 0
-    numero_int_2 = 0
 
     try:
         numero_int_1 = float(numero_1)
@@ -59,12 +56,6 @@ while True:
         
     elif operador == '4':
         print(f"{numero_int_1} // {numero_int_2} = {numero_int_1 // numero_int_2}")
-<<<<<<< HEAD
-        break
-    else:
-        print("Inválido digite novamente")
-=======
->>>>>>> 9096b4282ad807f937b9c242e68b9e5b372472c2
 
     else:
         print("Caracter inválido digite novamente")
